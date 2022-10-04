@@ -1,0 +1,123 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>jQuery Mobile</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<style>
+   li { list-style:none; }
+  .picture { list-style:none; padding:0; margin:0; }
+  .picture li { float:left; width:50%;}
+  .picture li a {display:block; margin:5px; border: 1px }
+  .picture li img { display:block; width:50%;  height:auto;}
+  .picture li img:hover { display:block; width:100%;  height:auto;} 
+  #texts { text-align: center;}
+</style>
+<script>
+	$('.multiple-items').slick({
+		infinite: true,
+		slidesToShow: 3,
+		slidesToScroll: 3
+	});
+</script>
+</head>
+
+<body>
+<div data-theme="b">
+	<div data-role="page" id="home">
+		<div data-role="header" data-theme="b">
+			<h1>DataArt The Incredible </h1>
+		</div>
+		<div data-role="content" style="text-align:center">
+				<img src="https://websitesapi.dataart.com/media/y3ehi3eo/dataart-logo.png" >
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#intro">소개</a></li>
+				<li><a href="#movie" data-rel="dialog">영상</a></li>
+				<li><a href="#gallery">사진</a></li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1>the bottom</h1>
+		</div>
+	</div>
+	
+	<div data-role="page" id="intro" data-theme="b">
+		<div data-role="header" data-theme="b">
+			<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>			
+			<h1>회사 소개</h1>
+		</div>
+		<div data-role="content">
+				<div  style="text-align:center">
+					<img src="https://websitesapi.dataart.com/media/y3ehi3eo/dataart-logo.png">
+				</div>			
+			<div data-role="collapsible-set" data-theme="b" data-content-theme="e">
+				<div data-role="collapsible" data-collapsed="false" id="texts">
+					<h3>What Are They Doing?</h3>
+					<p>
+						DataArt는 IT 컨설팅 회사입니다. 소프트웨어의 설계, 개발 및 지원을 하며 본사는 미국 뉴욕 시에 위치하고 있습니다.<br>
+						DataArt는 미국, 유럽(아르메니아, 불가리아, 독일, 조지아, 카자흐스탄, 폴란드, 스위스, 우크라이나 및 영국),아르헨티나 등 전세계에서 20개 이상의 지사를 두고 있습니다.
+						<br><br>
+						<img src="c1.png" width=150px, height=150px><img src="c2.png" width=150px, height=150px><img src="c3.png" width=150px, height=150px >
+					</p>
+				</div>
+				<div data-role="collapsible" id="texts">
+					<h3>How They Started..</h3>
+					<p>
+						DataArt 는 1997년 미국 뉴욕시에서 부터 시작 되었습니다. 1998년 상트페테르 부르크에 기반을 둔 팀이 메일박스 소프트웨어 개발 제작에 성공하게 되고<br>
+						이것은 이후 Mail.ru의 기초가 됩니다. 2001년 런던 지사의 회사를 오픈하였으며, 2007년 Microsoft Gold Certified Partner status 라는 자격을 얻게 되었는데<br>
+						이는 마이크로소프트 고객 만족도 지수 조사 프로그램에서 높은 점수를 받고 동시에 특별하고 의미있는 사업을 성공해야만 받게 되는 자격입니다.
+						<br><br><br>
+						<strong>Eugene Goland</strong><br>
+						회사 CEO<br><br>
+						<img src="https://websitesapi.dataart.com/media/bj5jus0h/eugene-goland-744_416-2.jpg?center=0.49996521981079578,0.49832877544819204&mode=crop&width=758&height=427&rnd=133039365552400000&format=webp" width=450px, height=300px>
+						<br><br>
+					
+					</p>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1></h1>
+		</div>		
+	</div>
+	
+	<div data-role="page" id="movie" data-theme="b">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>Video About..</h1>
+		</div>
+		<div data-role="content" >
+			<div class="ui-bar ui-bar-a">Why Our Clients Chose DataArt as a Technology Partner</div><br/>
+			<li><iframe width="100%" height="400" src="https://www.youtube.com/embed/7eCT_HfUx_8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li><br/>
+			<!-- <div class="ui-bar ui-bar-a">플래시몹(서울역광장) 동영상</div><br/>
+			<li><video controls width="100%" preload="metadata">
+				<source src="mop.mp4" type="video/mp4">
+			</video></li> -->
+		</div>
+		<div data-role="footer" data-theme="b">
+		</div>
+	</div>
+
+	<div data-role="page" id="gallery"  data-theme="b">
+		<div data-role="header" data-position="fixed"  data-theme="b">
+			<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+			<h1>Pics from...</h1>
+		</div>
+		<div data-role="content">
+            <ul class="picture" id="multiple-items">
+				<li><a href="4-1.jpg" rel="external"><img src="o1.jpg" /></a></li>	
+				<li><a href="4-2.jpg" rel="external"><img src="o2.jpg" /></a></li>	
+				<li><a href="4-3.jpg" rel="external"><img src="o3.png" /></a></li>	
+				<li><a href="4-4.jpg" rel="external"><img src="o4.png" /></a></li>	
+				<li><a href="4-5.jpg" rel="external"><img src="o5.jpeg" /></a></li>	
+            </ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1></h1>
+		</div>		
+	</div>
+</div>	
+</body>
+</html>
